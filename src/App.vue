@@ -32,13 +32,13 @@
                 <span class="thMenor">Força</span>
               </th>
                 <td>
-                  <input type="number" onkeydown="if(event.key==='.'){event.preventDefault();}" inputmode="numeric" class="campoTabela" v-model.number="valfor" @change="validateValue('valfor', valfor)">
+                  <input type="text" pattern="\d*" onkeydown="if(event.key==='.'){event.preventDefault();}" inputmode="numeric" class="campoTabela" v-model="valfor" @change="validateValue('valfor', valfor)">
                 </td>
                 <td>
-                  <input type="number" onkeydown="if(event.key==='.'){event.preventDefault();}" inputmode="numeric" class="campoTabela" v-model.number="racafor" @change="updateTotalCusto()">
+                  <input type="text" onkeydown="if(event.key==='.'){event.preventDefault();}" inputmode="numeric" class="campoTabela" v-model.number="racafor" @change="updateTotalCusto()">
                 </td>
                 <td>
-                  <input type="number" onkeydown="if(event.key==='.'){event.preventDefault();}" inputmode="numeric" class="campoTabela" v-model.number="bonusfor" @change="updateTotalCusto()">
+                  <input type="text" onkeydown="if(event.key==='.'){event.preventDefault();}" inputmode="numeric" class="campoTabela" v-model.number="bonusfor" @change="updateTotalCusto()">
                 </td>
                 <td>
                   <input type="text" class="campoTabela" disabled v-model="totalfor">
@@ -53,13 +53,13 @@
                   <span class="thMenor">Destreza</span>
                 </th>
                 <td>
-                  <input type="number" onkeydown="if(event.key==='.'){event.preventDefault();}" inputmode="numeric" class="campoTabela" v-model.number="valdes" @change="validateValue('valdes', valdes)">
+                  <input type="text" onkeydown="if(event.key==='.'){event.preventDefault();}" inputmode="numeric" class="campoTabela" v-model.number="valdes" @change="validateValue('valdes', valdes)">
                 </td>
                 <td>
-                  <input type="number" onkeydown="if(event.key==='.'){event.preventDefault();}" inputmode="numeric" class="campoTabela" v-model="racades" @change="updateTotalCusto()">
+                  <input type="text" onkeydown="if(event.key==='.'){event.preventDefault();}" inputmode="numeric" class="campoTabela" v-model="racades" @change="updateTotalCusto()">
                 </td>
                 <td>
-                  <input type="number" onkeydown="if(event.key==='.'){event.preventDefault();}" inputmode="numeric" class="campoTabela" v-model="bonusdes" @change="updateTotalCusto()">
+                  <input type="text" onkeydown="if(event.key==='.'){event.preventDefault();}" inputmode="numeric" class="campoTabela" v-model="bonusdes" @change="updateTotalCusto()">
                 </td>
                 <td>
                   <input type="text" class="campoTabela total" disabled v-model="totaldes">
@@ -74,13 +74,13 @@
                   <span class="thMenor">Constituição</span>
                 </th>
                 <td>
-                  <input type="number" onkeydown="if(event.key==='.'){event.preventDefault();}" inputmode="numeric" class="campoTabela" v-model.number="valcon" @change="validateValue('valcon', valcon)">
+                  <input type="text" onkeydown="if(event.key==='.'){event.preventDefault();}" inputmode="numeric" class="campoTabela" v-model.number="valcon" @change="validateValue('valcon', valcon)">
                 </td>
                 <td>
-                  <input type="number" onkeydown="if(event.key==='.'){event.preventDefault();}" inputmode="numeric" class="campoTabela"  v-model="racacon" @change="updateTotalCusto()">
+                  <input type="text" onkeydown="if(event.key==='.'){event.preventDefault();}" inputmode="numeric" class="campoTabela"  v-model="racacon" @change="updateTotalCusto()">
                 </td>
                 <td>
-                  <input type="number" onkeydown="if(event.key==='.'){event.preventDefault();}" inputmode="numeric" class="campoTabela" v-model="bonuscon" @change="updateTotalCusto()">
+                  <input type="text" onkeydown="if(event.key==='.'){event.preventDefault();}" inputmode="numeric" class="campoTabela" v-model="bonuscon" @change="updateTotalCusto()">
                 </td>
                 <td>
                   <input type="text" class="campoTabela" disabled v-model="totalcon">
@@ -95,10 +95,10 @@
                   <span class="thMenor">Inteligência</span>
                 </th>
                 <td>
-                  <input type="number" onkeydown="if(event.key==='.'){event.preventDefault();}" inputmode="numeric" class="campoTabela" v-model.number="valint" @change="validateValue('valint', valint)">
+                  <input type="text" onkeydown="if(event.key==='.'){event.preventDefault();}" inputmode="numeric" class="campoTabela" v-model.number="valint" @change="validateValue('valint', valint)">
                 </td>
-                <td><input type="number" onkeydown="if(event.key==='.'){event.preventDefault();}" inputmode="numeric" class="campoTabela" v-model="racaint" @change="updateTotalCusto()"></td>
-                <td><input type="number" onkeydown="if(event.key==='.'){event.preventDefault();}" inputmode="numeric" class="campoTabela" v-model="bonusint" @change="updateTotalCusto()"></td>
+                <td><input type="text" onkeydown="if(event.key==='.'){event.preventDefault();}" inputmode="numeric" class="campoTabela" v-model="racaint" @change="updateTotalCusto()"></td>
+                <td><input type="text" onkeydown="if(event.key==='.'){event.preventDefault();}" inputmode="numeric" class="campoTabela" v-model="bonusint" @change="updateTotalCusto()"></td>
                 <td><input type="text" class="campoTabela total" disabled v-model="totalint" ></td>
                 <td><input type="text" class="campoTabela custo" disabled v-model="custoint"></td>
               </tr>
@@ -108,10 +108,10 @@
                   <span class="thMenor">Sabedoria</span>
                 </th>
                 <td>
-                  <input type="number" onkeydown="if(event.key==='.'){event.preventDefault();}" inputmode="numeric" class="campoTabela" v-model.number="valsab" @change="validateValue('valsab', valsab)">
+                  <input type="text" onkeydown="if(event.key==='.'){event.preventDefault();}" inputmode="numeric" class="campoTabela" v-model.number="valsab" @change="validateValue('valsab', valsab)">
                 </td>
-                <td><input type="number" onkeydown="if(event.key==='.'){event.preventDefault();}" inputmode="numeric" class="campoTabela" v-model="racasab" @change="updateTotalCusto()"></td>
-                <td><input type="number" onkeydown="if(event.key==='.'){event.preventDefault();}" inputmode="numeric" class="campoTabela" v-model="bonussab" @change="updateTotalCusto()"></td>
+                <td><input type="text" onkeydown="if(event.key==='.'){event.preventDefault();}" inputmode="numeric" class="campoTabela" v-model="racasab" @change="updateTotalCusto()"></td>
+                <td><input type="text" onkeydown="if(event.key==='.'){event.preventDefault();}" inputmode="numeric" class="campoTabela" v-model="bonussab" @change="updateTotalCusto()"></td>
                 <td><input type="text" class="campoTabela total" disabled v-model="totalsab"></td>
                 <td><input type="text" class="campoTabela custo" disabled v-model="custosab"></td>
               </tr>
@@ -121,10 +121,10 @@
                   <span class="thMenor">Carisma</span>
                 </th>
                 <td>
-                  <input type="number" onkeydown="if(event.key==='.'){event.preventDefault();}" inputmode="numeric" class="campoTabela" v-model.number="valcar" @change="validateValue('valcar', valcar)">
+                  <input type="text" onkeydown="if(event.key==='.'){event.preventDefault();}" inputmode="numeric" class="campoTabela" v-model.number="valcar" @change="validateValue('valcar', valcar)">
                 </td>
-                <td><input type="number" onkeydown="if(event.key==='.'){event.preventDefault();}" inputmode="numeric" class="campoTabela" v-model="racacar" @change="updateTotalCusto()"></td>
-                <td><input type="number" onkeydown="if(event.key==='.'){event.preventDefault();}" inputmode="numeric" class="campoTabela" v-model="bonuscar" @change="updateTotalCusto()"></td>
+                <td><input type="text" onkeydown="if(event.key==='.'){event.preventDefault();}" inputmode="numeric" class="campoTabela" v-model="racacar" @change="updateTotalCusto()"></td>
+                <td><input type="text" onkeydown="if(event.key==='.'){event.preventDefault();}" inputmode="numeric" class="campoTabela" v-model="bonuscar" @change="updateTotalCusto()"></td>
                 <td><input type="text" class="campoTabela" disabled v-model="totalcar"></td>
                 <td><input type="text" class="campoTabela custo" disabled v-model="custocar"></td>
               </tr>
@@ -187,60 +187,61 @@
       }
     },
     methods: {
-      /** @returns {void} */
-      validateValue(valname: String, value: number): void{
+      range(value: number): number{
         if(value > 4){
           value = 4;
         }else if(value < -1){
           value = -1;
+        }else if(isNaN(value)){
+          value = 0
         }
-
-        value = Math.floor(value);
+        return value;
+      },
+      validateValue(valname: String, value: number): void{
         switch(valname){
           case 'valfor':
-            this.valfor = value;
+            this.valfor = this.range(value);
             break;
           case 'valdes':
-            this.valdes = value;
+            this.valdes = this.range(value);
             break;
           case 'valcon':
-            this.valcon = value;
+            this.valcon = this.range(value);
             break;
           case 'valint':
-            this.valint = value;
+            this.valint = this.range(value);
             break;
           case 'valsab':
-            this.valsab = value;
+            this.valsab = this.range(value);
             break;
           case 'valcar':
-            this.valcar = value;
+            this.valcar = this.range(value);
             break;
         }
         this.updateTotalCusto()
       },
-      /** @returns {void} */
       updateTotalCusto(): void{
-        this.totalfor = this.valfor + parseInt(this.racafor ? this.racafor : "0") + parseInt(this.bonusfor ? this.bonusfor : "0");
-        this.custofor = this.calcularCusto(this.valfor);
+        console.log("values", this.valfor, this.valdes, this.valcon, this.valint, this.valsab, this.valcar);
+        this.totalfor = this.range(parseInt(""+this.valfor)) + parseInt(this.racafor ? this.racafor : "0") + parseInt(this.bonusfor ? this.bonusfor : "0");
+        this.custofor = this.calcularCusto(this.range(parseInt(""+this.valfor)));
 
-        this.totaldes = this.valdes + parseInt(this.racades ? this.racades : "0") + parseInt(this.bonusdes ? this.bonusdes : "0");
-        this.custodes = this.calcularCusto(this.valdes);
+        this.totaldes = this.range(parseInt(""+this.valdes)) + parseInt(this.racades ? this.racades : "0") + parseInt(this.bonusdes ? this.bonusdes : "0");
+        this.custodes = this.calcularCusto(this.range(parseInt(""+this.valdes)));
 
-        this.totalcon = this.valcon + parseInt(this.racacon ? this.racacon : "0") + parseInt(this.bonuscon ? this.bonuscon : "0");
-        this.custocon = this.calcularCusto(this.valcon);
+        this.totalcon = this.range(parseInt(""+this.valcon)) + parseInt(this.racacon ? this.racacon : "0") + parseInt(this.bonuscon ? this.bonuscon : "0");
+        this.custocon = this.calcularCusto(this.range(parseInt(""+this.valcon)));
 
-        this.totalint = this.valint + parseInt(this.racaint ? this.racaint : "0") + parseInt(this.bonusint ? this.bonusint : "0");
-        this.custoint = this.calcularCusto(this.valint);
+        this.totalint = this.range(parseInt(""+this.valint)) + parseInt(this.racaint ? this.racaint : "0") + parseInt(this.bonusint ? this.bonusint : "0");
+        this.custoint = this.calcularCusto(this.range(parseInt(""+this.valint)));
 
-        this.totalsab = this.valsab + parseInt(this.racasab ? this.racasab : "0") + parseInt(this.bonussab ? this.bonussab : "0");
-        this.custosab = this.calcularCusto(this.valsab);
+        this.totalsab = this.range(parseInt(""+this.valsab)) + parseInt(this.racasab ? this.racasab : "0") + parseInt(this.bonussab ? this.bonussab : "0");
+        this.custosab = this.calcularCusto(this.range(parseInt(""+this.valsab)));
 
-        this.totalcar = this.valcar + parseInt(this.racacar ? this.racacar : "0") + parseInt(this.bonuscar ? this.bonuscar : "0");
-        this.custocar = this.calcularCusto(this.valcar);
+        this.totalcar = this.range(parseInt(""+this.valcar)) + parseInt(this.racacar ? this.racacar : "0") + parseInt(this.bonuscar ? this.bonuscar : "0");
+        this.custocar = this.calcularCusto(this.range(parseInt(""+this.valcar)));
 
         this.pontos = 10 - this.custofor - this.custodes - this.custocon - this.custoint - this.custosab - this.custocar;
       },
-      /** @returns {number} */
       calcularCusto(value: number): number{
         let custo: number = 0;
         switch(value){
@@ -277,6 +278,7 @@
     background-repeat: no-repeat;
     background-color: #d7c4a3;
     background-size: cover;
+    min-width: 27rem;
   }
   main{
     height: 80vh;
@@ -358,7 +360,7 @@
     -webkit-appearance: none;
     margin: 0;
   }
-  input[type="number"]{
+  input[type="text"]{
     -moz-appearance: textfield;
   }
   input{
