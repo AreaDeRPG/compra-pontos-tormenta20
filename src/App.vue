@@ -220,24 +220,23 @@
       },
       /** @returns {void} */
       updateTotalCusto(): void{
-        this.totalfor = parseInt(this.valfor + this.racafor + this.bonusfor);
+        this.totalfor = this.valfor + parseInt(this.racafor ? this.racafor : "0") + parseInt(this.bonusfor ? this.bonusfor : "0");
         this.custofor = this.calcularCusto(this.valfor);
 
-        this.totaldes = parseInt(this.valdes + this.racades + this.bonusdes);
+        this.totaldes = this.valdes + parseInt(this.racades ? this.racades : "0") + parseInt(this.bonusdes ? this.bonusdes : "0");
         this.custodes = this.calcularCusto(this.valdes);
 
-        this.totalcon = parseInt(this.valcon + this.racacon + this.bonuscon);
+        this.totalcon = this.valcon + parseInt(this.racacon ? this.racacon : "0") + parseInt(this.bonuscon ? this.bonuscon : "0");
         this.custocon = this.calcularCusto(this.valcon);
 
-        this.totalint = parseInt(this.valint + this.racaint + this.bonusint);
+        this.totalint = this.valint + parseInt(this.racaint ? this.racaint : "0") + parseInt(this.bonusint ? this.bonusint : "0");
         this.custoint = this.calcularCusto(this.valint);
 
-        this.totalsab = parseInt(this.valsab + this.racasab + this.bonussab);
+        this.totalsab = this.valsab + parseInt(this.racasab ? this.racasab : "0") + parseInt(this.bonussab ? this.bonussab : "0");
         this.custosab = this.calcularCusto(this.valsab);
 
-        this.totalcar = parseInt(this.valcar + this.racacar + this.bonuscar);
+        this.totalcar = this.valcar + parseInt(this.racacar ? this.racacar : "0") + parseInt(this.bonuscar ? this.bonuscar : "0");
         this.custocar = this.calcularCusto(this.valcar);
-
 
         this.pontos = 10 - this.custofor - this.custodes - this.custocon - this.custoint - this.custosab - this.custocar;
       },
